@@ -16,11 +16,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var text2: UITextField!
     
+    @IBOutlet weak var answerLabel: UILabel!
    
     @IBAction func buttonCalc(_ sender: AnyObject) {
     
         print(text1.text!) //to show what's typed in the box
         print(text2.text!)
+        
+        answerLabel.text = String(Double(text1.text!)! + Double(text2.text!)!)
+        
+        //better way below
+        
+        answerLabel.text = "Answer is \(Double(text1.text!)! + Double(text2.text!)!)"
     
     }
     

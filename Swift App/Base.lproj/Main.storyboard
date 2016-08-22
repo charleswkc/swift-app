@@ -45,13 +45,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNr-8c-Uev">
-                                <frame key="frameInset" minX="146" minY="239" width="85" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNr-8c-Uev">
                                 <state key="normal" title="CALCULATE"/>
                                 <connections>
                                     <action selector="buttonCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kz5-5j-4Ol"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffB-JZ-sPn">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -60,14 +64,17 @@
                             <constraint firstItem="Na9-QM-gt7" firstAttribute="top" secondItem="KYj-xT-llW" secondAttribute="bottom" constant="10" id="AOm-ZN-ci2"/>
                             <constraint firstItem="KYj-xT-llW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ci9-61-bm1"/>
                             <constraint firstItem="XCf-H4-gNH" firstAttribute="top" secondItem="Na9-QM-gt7" secondAttribute="bottom" constant="17.5" id="KON-Z5-Gg5"/>
+                            <constraint firstItem="ffB-JZ-sPn" firstAttribute="top" secondItem="cNr-8c-Uev" secondAttribute="bottom" constant="23" id="Qot-Dz-IoK"/>
                             <constraint firstItem="cNr-8c-Uev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rd0-Y3-UrY"/>
                             <constraint firstItem="XCf-H4-gNH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RpN-KJ-OcT"/>
                             <constraint firstItem="hVZ-91-Njz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z5e-J6-54q"/>
                             <constraint firstItem="hVZ-91-Njz" firstAttribute="top" secondItem="XCf-H4-gNH" secondAttribute="bottom" constant="25" id="e88-o2-dKl"/>
+                            <constraint firstItem="ffB-JZ-sPn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oR7-eY-KR4"/>
                             <constraint firstItem="KYj-xT-llW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="tH1-hE-Jhd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answerLabel" destination="ffB-JZ-sPn" id="jri-GO-Iie"/>
                         <outlet property="text1" destination="XCf-H4-gNH" id="5wc-3q-HP5"/>
                         <outlet property="text2" destination="hVZ-91-Njz" id="4uc-H7-Nv0"/>
                         <outlet property="theLabel" destination="KYj-xT-llW" id="i9o-ts-exP"/>
