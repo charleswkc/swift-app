@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var theLabel: UILabel!
     
     @IBOutlet weak var text1: UITextField!
@@ -17,9 +17,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var text2: UITextField!
     
     @IBOutlet weak var answerLabel: UILabel!
-   
-    @IBAction func buttonCalc(_ sender: AnyObject) {
     
+    @IBOutlet weak var answerLabel2: UILabel!
+    
+    @IBAction func buttonCalc(_ sender: AnyObject) {
+        
         print(text1.text!) //to show what's typed in the box
         print(text2.text!)
         
@@ -28,10 +30,17 @@ class ViewController: UIViewController {
         //better way below
         
         answerLabel.text = "Answer is \(Double(text1.text!)! + Double(text2.text!)!)"
-    
+        
+        let addition = false
+        if addition {
+            answerLabel2.text = "Answer is \(Double(text1.text!)! + Double(text2.text!)!)"
+        } else {
+            answerLabel2.text = "Answer is \(Double(text1.text!)! - Double(text2.text!)!)"
+        }
+        
     }
     
-     var tapCount = 0 //start count from zero
+    var tapCount = 0 //start count from zero
     
     @IBAction func buttonTapped(_ sender: AnyObject) {
         
@@ -42,7 +51,7 @@ class ViewController: UIViewController {
         if tapCount > 10 { //change the label when tapped > 10 times
             theLabel.text = "You tapped the button 10 times!"
         }
-    
+        
     }
     
     
@@ -52,12 +61,12 @@ class ViewController: UIViewController {
         //self.view.backgroundColor = UIColor.red //make background red
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
