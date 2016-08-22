@@ -12,7 +12,19 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var theLabel: UILabel!
     
-    var tapCount = 0 //start count from zero
+    @IBOutlet weak var text1: UITextField!
+    
+    @IBOutlet weak var text2: UITextField!
+    
+   
+    @IBAction func buttonCalc(_ sender: AnyObject) {
+    
+        print(text1.text!) //to show what's typed in the box
+        print(text2.text!)
+    
+    }
+    
+     var tapCount = 0 //start count from zero
     
     @IBAction func buttonTapped(_ sender: AnyObject) {
         

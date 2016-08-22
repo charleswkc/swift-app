@@ -29,16 +29,47 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evn-nF-bWR"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XCf-H4-gNH">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="jJa-RA-tBs"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hVZ-91-Njz">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="JAe-9M-B2D"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNr-8c-Uev">
+                                <frame key="frameInset" minX="146" minY="239" width="85" height="30"/>
+                                <state key="normal" title="CALCULATE"/>
+                                <connections>
+                                    <action selector="buttonCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kz5-5j-4Ol"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Na9-QM-gt7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="56M-wc-Jue"/>
+                            <constraint firstItem="cNr-8c-Uev" firstAttribute="top" secondItem="hVZ-91-Njz" secondAttribute="bottom" constant="25" id="AFe-1S-bSD"/>
                             <constraint firstItem="Na9-QM-gt7" firstAttribute="top" secondItem="KYj-xT-llW" secondAttribute="bottom" constant="10" id="AOm-ZN-ci2"/>
                             <constraint firstItem="KYj-xT-llW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ci9-61-bm1"/>
+                            <constraint firstItem="XCf-H4-gNH" firstAttribute="top" secondItem="Na9-QM-gt7" secondAttribute="bottom" constant="17.5" id="KON-Z5-Gg5"/>
+                            <constraint firstItem="cNr-8c-Uev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rd0-Y3-UrY"/>
+                            <constraint firstItem="XCf-H4-gNH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RpN-KJ-OcT"/>
+                            <constraint firstItem="hVZ-91-Njz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z5e-J6-54q"/>
+                            <constraint firstItem="hVZ-91-Njz" firstAttribute="top" secondItem="XCf-H4-gNH" secondAttribute="bottom" constant="25" id="e88-o2-dKl"/>
                             <constraint firstItem="KYj-xT-llW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="tH1-hE-Jhd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="XCf-H4-gNH" id="5wc-3q-HP5"/>
+                        <outlet property="text2" destination="hVZ-91-Njz" id="4uc-H7-Nv0"/>
                         <outlet property="theLabel" destination="KYj-xT-llW" id="i9o-ts-exP"/>
                     </connections>
                 </viewController>
