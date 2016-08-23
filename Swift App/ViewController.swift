@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         
         answerLabel.text = "Answer is \(Double(text1.text!)! + Double(text2.text!)!)"
         
+        //boolean
         let addition = false
         if addition {
             answerLabel2.text = "Answer is \(Double(text1.text!)! + Double(text2.text!)!)"
